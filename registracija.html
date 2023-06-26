@@ -1,11 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registracija</title>
-</head>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Highway Blog - Free CSS Template</title>
+<!-- 
+
+Highway Template
+
+https://templatemo.com/tm-520-highway
+
+-->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/light-box.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <style> 
+    body {
+      background-color: black;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }   
+    .login-container {
+      max-width: 400px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      margin: 0 auto;
+      border-radius: 5px;
+    }
+    
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+    
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .login-container button:hover {
+      background-color: #45a049;
+    }</style>
 <body>
-    <h1>Registracija</h1>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html">Gale<em>rija</em></a>
+        </div>
+      <div class="menu-icon">
+        <span></span>
+      </div>
+    </nav>
+
+    <div class="page-heading">
+        <div class="container">
+            <div class="heading-content">
+                <h1>Registracija <em>korisnika</em></h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="login-container">
+            <h1>Registracija</h1>
+            <form>
+                <input type="text" id="name" placeholder="Ime"> <br>
+                <input type="text" id="prezime" placeholder="Prezime"> <br>
+                <input id="ime" type="text" placeholder="Korisnicko ime"> <br>
+                <input id="lozinka" type="password" placeholder="Lozinka"> <br>
+                <input id="lozinkaPotvrda" type="password" placeholder="Potvrda lozinke"> <br>
+    
+                
+                <button id="potvrda">Registruj se</button>
+                <div id="poruka">
+        
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="overlay-menu">
+      <div class="container">
+        <div class="row">
+          <div class="main-menu">
+              <ul>
+                  <li>
+                      <a href="index.html">Home - Full-width</a>
+                  </li>
+                  <li>
+                      <a href="masonry.html">Home - Masonry</a>
+                  </li>
+                  <li>
+                      <a href="grid.html">Home - Small-width</a>
+                  </li>
+                  <li>
+                      <a href="about.html">About Us</a>
+                  </li>
+                  <li>
+                      <a href="blog.html">Blog Entries</a>
+                  </li>
+                  <li>
+                      <a href="single-post.html">Single Post</a>
+                  </li>
+              </ul>
+              <p>We create awesome templates for you</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <footer>
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <p>Copyright &copy; 2018 Company Name 
+  
+  | Designed by TemplateMo</p>
+        </div>
+    </div>
+  </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 </html>
