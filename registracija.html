@@ -22,8 +22,9 @@ https://templatemo.com/tm-520-highway
         <link rel="stylesheet" href="css/templatemo-style.css">
 
         <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
+        <script src="js/registracija.js"></script>
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        
     </head>
     <style> 
     body {
@@ -99,19 +100,19 @@ https://templatemo.com/tm-520-highway
         <div class="col-md-6">
           <div class="login-container">
             <h1>Registracija</h1>
-            <form>
-                <input type="text" id="name" placeholder="Ime"> <br>
-                <input type="text" id="prezime" placeholder="Prezime"> <br>
-                <input id="ime" type="text" placeholder="Korisnicko ime"> <br>
-                <input id="lozinka" type="password" placeholder="Lozinka"> <br>
-                <input id="lozinkaPotvrda" type="password" placeholder="Potvrda lozinke"> <br>
+            
+                <input type="text" id="ime" placeholder="Ime" required> <br>
+                <input type="text" id="prezime" placeholder="Prezime" required> <br>
+                <input id="korisnickoIme" type="text" placeholder="Korisnicko ime" required> <br>
+                <input id="lozinka" type="password" placeholder="Lozinka" required> <br>
+                <input id="lozinkaPotvrda" type="password" placeholder="Potvrda lozinke" required> <br>
     
                 
-                <button id="potvrda">Registruj se</button>
+                <button id="potvrda" onclick="registrujSe()">Registruj se</button>
                 <div id="poruka">
         
                 </div>
-            </form>
+           
           </div>
         </div>
       </div>
