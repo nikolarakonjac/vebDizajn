@@ -9,15 +9,17 @@ function logovanje(){
         return;
     }
     let nizKorisnika=JSON.parse(localStorage.getItem("korisniciIme"));   
-    for (let i =0;nizKorisnika.length();i++){
+    for (let i =0;i<nizKorisnika.length;i++){
         if(nizKorisnika[i]==korisnickoIme){
-            username=korisnickoIme;
-            password=lozinka;
+            alert("usao sam");
+            let username=korisnickoIme;
+            let password=lozinka;
             localStorage.setItem("username", JSON.stringify(username));
             localStorage.setItem("password", JSON.stringify(password));
             //Dodaj samo redirect na drugu stranicu
             return;
         }
+        
     }
 
 

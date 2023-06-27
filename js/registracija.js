@@ -1,26 +1,28 @@
 function registrujSe(){
     alert("Usao sam");
-    let korisnickoIme=document.getElementById("korisncikoIme").value;
+    let korisnickoIme=document.getElementById("korisnickoIme").value;
     let lozinka=document.getElementById("lozinka").value;
     let lozinkaPotvrda=document.getElementById("lozinkaPotvrda").value;
     let ime=document.getElementById("ime").value;
-
+    alert("prosao");
     if(lozinka!=lozinkaPotvrda){
         alert("Lozinka i potvrda lozinke nisu isti.");
         return;
     }
-    alert("Uspesno logovanje");
 
-    let nizKorisnika=JSON.parse(localStorage.getItem("korisniciIme"));
+
+    let nizKorisnika=localStorage.getItem("korisniciIme");
+    alert(nizKorisnika);
     if(nizKorisnika==null){
-        username="";
-        password="";
+
+        let username="";
+        let password="";
         localStorage.setItem("username", JSON.stringify(username));
         localStorage.setItem("password", JSON.stringify(password));
-        nizKorisnika=[];
-        nizKorisnikaLozinka=[];
-        nizKorisnikaPonude=[];
-        nizBrojevaPonuda=[];
+        let nizKorisnika=[];
+        let nizKorisnikaLozinka=[];
+        let nizKorisnikaPonude=[[]];
+        let nizBrojevaPonuda=[];
         //dodavanje novog korisnika takodje je on i prvi
         nizKorisnika.push(korisnickoIme);//dodavanje korisnickog imena
         nizKorisnikaLozinka.push(lozinka);//dodavanje lozinke
@@ -30,12 +32,14 @@ function registrujSe(){
         localStorage.setItem("korisniciLozinka", JSON.stringify(nizKorisnikaLozinka));
         localStorage.setItem("korisniciPonude", JSON.stringify(nizKorisnikaPonude));
         localStorage.setItem("korisniciBrojPonuda", JSON.stringify(nizBrojevaPonuda));
+        alert("Uspesno registracija");
+        return;
     }
     let nizKorisnikaLozinka=JSON.parse(localStorage.getItem("korisniciLozinka"));
     let nizKorisnikaPonude=JSON.parse(localStorage.getItem("korisniciPonude"));
     let nizBrojevaPonuda=JSON.parse(localStorage.getItem("korisniciBrojPonuda"));
-    
-    for (let i=0;i<nizKorisnika.length();i++){
+    nizKorisnika=JSON.parse(nizKorisnika);
+    for (let i=0;i<nizKorisnika.length;i++){
         if (nizKorisnika[i]==korisnickoIme){
             alert("Korisnicko ime vec postoji");
             return;
@@ -44,6 +48,7 @@ function registrujSe(){
     nizKorisnika.push(korisnickoIme);
     nizKorisnikaLozinka.push(lozinka);
     nizBrojevaPonuda.push(0);
+    nizKorisnikaPonude.push([]);
     
     localStorage.setItem("korisniciIme", JSON.stringify(nizKorisnika));
     localStorage.setItem("korisniciLozinka", JSON.stringify(nizKorisnikaLozinka));

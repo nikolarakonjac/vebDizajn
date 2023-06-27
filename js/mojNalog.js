@@ -7,13 +7,15 @@ function prikazPonuda(){
     let nizKorisnikaPonude=JSON.parse(localStorage.getItem("korisniciPonude"));
     let nizBrojevaPonuda=JSON.parse(localStorage.getItem("korisniciBrojPonuda"));
 
-    let indeks=0;
-    for(let i=0;i<nizKorisnika.length();i++){
+    
+    for(let i=0;i<nizKorisnikaPonude.length;i++){
         if(nizKorisnika[i]==username){
-            for(let j=indeks;j<indeks+nizBrojevaPonuda[i];j++){
-                //ispis ponuda na sajtu preko jQuery tovaranje u tabelu nizKorisnikPonuda
+            for(let j=0 ; j<nizKorisnikaPonude[i].length;j++){
+                //ispis njegovih ponuda
             }
+
         }
+        
     }
     
 }
