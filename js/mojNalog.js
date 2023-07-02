@@ -24,6 +24,10 @@ function prikazPonuda(){
         }
         
     }
+    localStorage.setItem("korisniciIme", JSON.stringify(nizKorisnika));
+    localStorage.setItem("korisniciPonude", JSON.stringify(nizKorisnikaPonude));
+    localStorage.setItem("korisniciBrojPonuda", JSON.stringify(nizBrojevaPonuda));
+    localStorage.setItem("nizSlikaPonuda", JSON.stringify(nizSlikaZaPonudu));
     
 }
 
