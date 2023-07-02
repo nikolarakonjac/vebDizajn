@@ -9,22 +9,30 @@ $(document).ready(function() {
         let nizSlikaZaPonudu=JSON.parse(localStorage.getItem("nizSlikaPonuda"));
         
         let row = $(this).closest("tr");
-        var rowId = parseInt(row.attr("id"));
-
-        for(let i=0;i<nizKorisnikaPonude.length;i++){
+        let tdClassName = row.find("td").attr("class");
+        
+        let ime=row.find("td." + tdClassName).text();
+        alert(ime);
+        for(let i=0;i<nizKorisnika.length;i++){
             if(nizKorisnika[i]==username){
-                nizKorisnikaPonude[i].splice(rowID, 1);
-                nizSlikaZaPonudu[i].splice(rowID, 1);
-                nizBrojevaPonuda[i]--;
+                for(j=0;j<nizKorisnikaPonude[i].length;j++){
+                    if(ime==nizKorisnikaPonude[i][j]){
+                        nizKorisnikaPonude[i].splice(j, 1);
+                        nizSlikaZaPonudu[i].splice(j, 1);
+                        nizBrojevaPonuda[i]--;
+                    }
+                }
+
 
             }
         }
+        row.remove();
         localStorage.setItem("korisniciIme", JSON.stringify(nizKorisnika));
         localStorage.setItem("korisniciPonude", JSON.stringify(nizKorisnikaPonude));
         localStorage.setItem("korisniciBrojPonuda", JSON.stringify(nizBrojevaPonuda));
         localStorage.setItem("nizSlikaPonuda", JSON.stringify(nizSlikaZaPonudu));
         
         // Uklanjamo red iz tabele
-        row.remove();
+
     });
 });

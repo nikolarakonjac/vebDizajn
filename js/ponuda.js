@@ -13,9 +13,9 @@ function ponudi(){
     
     for(let i=0;i<nizKorisnikaPonude.length;i++){
         if(nizKorisnika[i]==username){
-            nizKorisnikaPonude[i].push("45");
+            nizKorisnikaPonude[i].push("45");//dodavanje ponude
             nizBrojevaPonuda[i]++;
-            nizSlikaZaPonudu[i].push("slika");
+            nizSlikaZaPonudu[i].push("slika");//dodavanje ime slike za ponudu
 
             //ovde samo promeni vrednost ponude stavio sam da je 45
 

@@ -24,6 +24,8 @@ function registrujSe(){
         let nizKorisnikaPonude=[];
         let nizKr=[];
         let nizSlikaZaPonudu=[];
+        let nizSvihPonuda=[];
+        let nizSvihSlika=[];
         nizSlikaZaPonudu.push(nizKr);
         nizKorisnikaPonude.push(nizKr);
         let nizBrojevaPonuda=[];
@@ -32,6 +34,8 @@ function registrujSe(){
         nizKorisnikaLozinka.push(lozinka);//dodavanje lozinke
         nizBrojevaPonuda.push(0);//dodavanje broja ponuda koje korisnik ima
         //dodavanje u localStorage
+        localStorage.setItem("nizSvihSlika", JSON.stringify(nizSvihSlika));
+        localStorage.setItem("nizSvihPonuda",JSON.stringify(nizSvihPonuda));
         localStorage.setItem("korisniciIme", JSON.stringify(nizKorisnika));
         localStorage.setItem("korisniciLozinka", JSON.stringify(nizKorisnikaLozinka));
         localStorage.setItem("korisniciPonude", JSON.stringify(nizKorisnikaPonude));

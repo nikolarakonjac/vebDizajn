@@ -15,7 +15,7 @@ function prikazPonuda(){
             for(let j=0 ; j<nizKorisnikaPonude[i].length;j++){
                 
                 let row = $("<tr>").attr("id", j);
-                $("<td>").text(nizKorisnikaPonude[i][j]).appendTo(row);
+                $("<td>").text(nizKorisnikaPonude[i][j]).attr("class", j).appendTo(row);
                 $("<td>").text(nizSlikaZaPonudu[i][j]).appendTo(row);
                 $("<td>").append("<button class='remove-btn'>Ukloni</button>").appendTo(row);
                 row.appendTo("#tableBody");
