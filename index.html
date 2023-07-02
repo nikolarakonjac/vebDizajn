@@ -256,46 +256,60 @@ https://templatemo.com/tm-520-highway
     
 
     <section class="overlay-menu">
-      <div class="container">
-        <div class="row">
-          <div class="main-menu">
+        <div class="container">
+          <div class="row">
+            <div class="main-menu">
               <ul>
-                  <li>
-                      <a href="index.html">Home - Full-width</a>
-                  </li>
-                  <li>
-                      <a href="masonry.html">Home - Masonry</a>
-                  </li>
-                  <li>
-                      <a href="grid.html">Home - Small-width</a>
-                  </li>
-                  <li>
-                      <a href="about.html">About Us</a>
-                  </li>
-                  <li>
-                      <a href="blog.html">Blog Entries</a>
-                  </li>
-                  <li>
-                      <a href="single-post.html">Single Post</a>
-                  </li>
-                  <li>
-                    <a href="umetnine.html">Umetnine</a>
+                <li>
+                  <a href="index.html">Home - Full-width</a>
                 </li>
                 <li>
-                    <a href="umetnici.html">Umetnici</a>
+                  <a href="masonry.html">Home - Masonry</a>
                 </li>
                 <li>
-                    <a href="Onama.html">O nama</a>
+                  <a href="grid.html">Home - Small-width</a>
                 </li>
                 <li>
-                    <a href="MojNalog.html">Moj nalog</a>
+                  <a href="about.html">About Us</a>
+                </li>
+                <li>
+                  <a href="blog.html">Blog Entries</a>
+                </li>
+                <li>
+                  <a href="single-post.html">Single Post</a>
+                </li>
+                <li class="dropdown">
+                  <a href="javascript:void(0)" class="dropbtn">Umetnine</a>
+                  <div class="dropdown-content" style="display: none;">
+                    <ul>
+                        <li><a href="umetnine.html">Slike</a></li>
+                        <li><a href="skulpture.html">Skulpture</a></li>
+                        <li><a href="crtezi.html">Crtezi</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="Onama.html">O nama</a>
+                </li>
+                <li>
+                  <a href="MojNalog.html">Moj nalog</a>
                 </li>
               </ul>
               <p>We create awesome templates for you.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      
+      <script>
+        // JavaScript to toggle visibility of dropdown content
+        document.querySelector('.dropdown').addEventListener('click', function() {
+          var dropdownContent = document.querySelector('.dropdown-content');
+          dropdownContent.style.display = dropdownContent.style.display === 'none' ? 'block' : 'none';
+        });
+      </script>
+      
+      
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
