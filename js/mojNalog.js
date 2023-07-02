@@ -1,3 +1,4 @@
+
 function prikazPonuda(){
 
     let username=JSON.parse(localStorage.getItem("username"));
@@ -6,12 +7,18 @@ function prikazPonuda(){
     let nizKorisnika=JSON.parse(localStorage.getItem("korisniciIme"));
     let nizKorisnikaPonude=JSON.parse(localStorage.getItem("korisniciPonude"));
     let nizBrojevaPonuda=JSON.parse(localStorage.getItem("korisniciBrojPonuda"));
+    let nizSlikaZaPonudu=JSON.parse(localStorage.getItem("nizSlikaPonuda"));
 
     
     for(let i=0;i<nizKorisnikaPonude.length;i++){
         if(nizKorisnika[i]==username){
             for(let j=0 ; j<nizKorisnikaPonude[i].length;j++){
-                //ispis njegovih ponuda
+                
+                let row = $("<tr>").attr("id", j);
+                $("<td>").text(nizKorisnikaPonude[i][j]).appendTo(row);
+                $("<td>").text(nizSlikaZaPonudu[i][j]).appendTo(row);
+                $("<td>").append("<button class='remove-btn'>Ukloni</button>").appendTo(row);
+                row.appendTo("#tableBody");
             }
 
         }
@@ -19,3 +26,6 @@ function prikazPonuda(){
     }
     
 }
+
+
+

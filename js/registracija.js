@@ -21,7 +21,11 @@ function registrujSe(){
         localStorage.setItem("password", JSON.stringify(password));
         let nizKorisnika=[];
         let nizKorisnikaLozinka=[];
-        let nizKorisnikaPonude=[[]];
+        let nizKorisnikaPonude=[];
+        let nizKr=[];
+        let nizSlikaZaPonudu=[];
+        nizSlikaZaPonudu.push(nizKr);
+        nizKorisnikaPonude.push(nizKr);
         let nizBrojevaPonuda=[];
         //dodavanje novog korisnika takodje je on i prvi
         nizKorisnika.push(korisnickoIme);//dodavanje korisnickog imena
@@ -32,12 +36,14 @@ function registrujSe(){
         localStorage.setItem("korisniciLozinka", JSON.stringify(nizKorisnikaLozinka));
         localStorage.setItem("korisniciPonude", JSON.stringify(nizKorisnikaPonude));
         localStorage.setItem("korisniciBrojPonuda", JSON.stringify(nizBrojevaPonuda));
+        localStorage.setItem("nizSlikaPonuda", JSON.stringify(nizSlikaZaPonudu));
         alert("Uspesno registracija");
         return;
     }
     let nizKorisnikaLozinka=JSON.parse(localStorage.getItem("korisniciLozinka"));
     let nizKorisnikaPonude=JSON.parse(localStorage.getItem("korisniciPonude"));
     let nizBrojevaPonuda=JSON.parse(localStorage.getItem("korisniciBrojPonuda"));
+    let nizSlikaZaPonudu=JSON.parse(localStorage.getItem("nizSlikaPonuda"));
     nizKorisnika=JSON.parse(nizKorisnika);
     for (let i=0;i<nizKorisnika.length;i++){
         if (nizKorisnika[i]==korisnickoIme){
@@ -45,14 +51,18 @@ function registrujSe(){
             return;
         }
     }
+    let nizKr=[];
+    nizSlikaZaPonudu.push(nizKr);
+    nizKorisnikaPonude.push(nizKr);
     nizKorisnika.push(korisnickoIme);
     nizKorisnikaLozinka.push(lozinka);
     nizBrojevaPonuda.push(0);
-    nizKorisnikaPonude.push([]);
+    
     
     localStorage.setItem("korisniciIme", JSON.stringify(nizKorisnika));
     localStorage.setItem("korisniciLozinka", JSON.stringify(nizKorisnikaLozinka));
     localStorage.setItem("korisniciPonude", JSON.stringify(nizKorisnikaPonude));
     localStorage.setItem("korisniciBrojPonuda", JSON.stringify(nizBrojevaPonuda));
+    localStorage.setItem("nizSlikaPonuda", JSON.stringify(nizSlikaZaPonudu));
     alert("Uspesno ste registrovani");
 }

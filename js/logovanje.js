@@ -8,6 +8,9 @@ function logovanje(){
         alert("Vec ste ulogovani");
         return;
     }
+    if(password!=lozinka){
+        alert("pogresno ste uneli podatke za logovanje");
+    }
     let nizKorisnika=JSON.parse(localStorage.getItem("korisniciIme"));   
     for (let i =0;i<nizKorisnika.length;i++){
         if(nizKorisnika[i]==korisnickoIme){
@@ -21,6 +24,7 @@ function logovanje(){
         }
         
     }
+    alert("pogresno ste uneli podatke za logovanje");
 
 
 }
