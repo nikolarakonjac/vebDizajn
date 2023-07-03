@@ -1,5 +1,28 @@
 jQuery(document).ready(function($) {
 
+
+
+  //na index strani ispis  3 najnovije ponude         
+  let nizSvihPonuda=JSON.parse(localStorage.getItem("nizSvihPonuda"));
+  let nizSvihSlika=JSON.parse(localStorage.getItem("nizSvihSlika"));
+  if(nizSvihPonuda.length == 0){
+    $(".najnovijePonude").text("Trenutno nema nijedne ponude.");
+  }
+  else{
+    for(let i=nizSvihPonuda.length - 1, j=0; i >= 0 && j < 3; i--, j++){
+        /*let ponuda = $("<p>").text(nizSvihPonuda[i] + " " + nizSvihSlika[i]);
+        $(".najnovijePonude").append(ponuda);*/
+        let colDiv = $("<div>").addClass("col-md-4");
+        let slika = $("<p>").text("ime slike: " + nizSvihSlika[i]);
+        let ponuda = $("<p>").text("ponuda: " + nizSvihPonuda[i]);
+        colDiv.append(slika);
+        colDiv.append(ponuda);
+        $(".najnovijePonude").append(colDiv);
+    }
+  }
+  
+    
+ 
 	'use strict';
 
         $(function() {
