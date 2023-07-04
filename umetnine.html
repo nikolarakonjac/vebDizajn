@@ -331,15 +331,6 @@ https://templatemo.com/tm-520-highway
                 <li>
                   <a href="grid.html">Home - Small-width</a>
                 </li>
-                <li>
-                  <a href="about.html">About Us</a>
-                </li>
-                <li>
-                  <a href="blog.html">Blog Entries</a>
-                </li>
-                <li>
-                  <a href="single-post.html">Single Post</a>
-                </li>
                 <li class="dropdown">
                   <a href="javascript:void(0)" class="dropbtn">Umetnine</a>
                   <div class="dropdown-content" style="display: none;">
@@ -351,17 +342,26 @@ https://templatemo.com/tm-520-highway
                   </div>
                 </li>
                 <li>
-                  <a href="Onama.html">O nama</a>
+                    <a href="umetnici.html">Umetnici</a>
+                </li>
+                <li>
+                  <a href="about.html">O nama</a>
                 </li>
                 <li>
                   <a href="MojNalog.html">Moj nalog</a>
                 </li>
+                <li>
+                    <a href="registracija.html">Registracija</a>
+                </li>
+                <li>
+                    <a href="logovanje.html">Logovanje</a>
+                </li>
               </ul>
-              <p>We create awesome templates for you.</p>
+             
             </div>
           </div>
         </div>
-      </section>
+    </section>
       
       <script>
         // JavaScript to toggle visibility of dropdown content
@@ -377,6 +377,9 @@ https://templatemo.com/tm-520-highway
             }
         </script>
 
+    
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
@@ -389,6 +392,8 @@ https://templatemo.com/tm-520-highway
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
+
+           
 
             let opisSlika = [
                 { imeSlike: "Mona liza", imeSlikara: "Leonardo da Vinci", vrednost: "nepoznato", src:"" },
@@ -469,6 +474,11 @@ https://templatemo.com/tm-520-highway
             }
 
 
+            $(".skociNaOpisSlike").click(function() {
+                window.location.href = "umetnina.html";
+            });
+
+
 
             function renderImages() {
                 let html = '';
@@ -490,6 +500,9 @@ https://templatemo.com/tm-520-highway
                                 '</div>' +
                                 '</div>' +
                                 '<button class="popupButton" id="popupButton' + (i + 1) + '">Dodaj ponudu</button>' +
+
+                                '<button style="margin: 5px;" class="skociNaOpisSlike">Opis slike</button>' + 
+
                             '</div>' +
                             '</div>';
                 }
@@ -502,6 +515,9 @@ https://templatemo.com/tm-520-highway
 
             
             $(".popupButton").click(function() {
+
+                
+
                 var imageId = $(this).closest('.portfolio-item').find('.image img').attr('src');
                 imageId = imageId.substring(imageId.lastIndexOf("/") + 1, imageId.lastIndexOf("."));
                 

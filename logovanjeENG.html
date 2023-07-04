@@ -22,9 +22,8 @@ https://templatemo.com/tm-520-highway
         <link rel="stylesheet" href="css/templatemo-style.css">
 
         <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-        <script src="js/registracija.js"></script>
+        <script src="js/logovanje.js"></script>
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-        
     </head>
     <style> 
     body {
@@ -82,8 +81,8 @@ https://templatemo.com/tm-520-highway
     <nav>
         <div class="logo">
           <a href="index.html">Gala<em>xy     </em></a>
-          <a href="registracijaENG.html">EN<em>G </em></a>
-          <a href="registracija.html">SR<em>B</em></a>
+          <a href="logovanjeENG.html">EN<em>G </em></a>
+          <a href="logovanje.html">SR<em>B</em></a>
         </div>
       <div class="menu-icon">
         <span></span>
@@ -93,7 +92,7 @@ https://templatemo.com/tm-520-highway
     <div class="page-heading">
         <div class="container">
             <div class="heading-content">
-                <h1>Registracija <em>korisnika</em></h1>
+                <h1>Login <em>users</em></h1>
             </div>
         </div>
     </div>
@@ -101,20 +100,19 @@ https://templatemo.com/tm-520-highway
       <div class="row justify-content-center">
         <div class="col-md-6">
           <div class="login-container">
-            <h1>Registracija</h1>
-            
-                <input type="text" id="ime" placeholder="Ime" required> <br>
-                <input type="text" id="prezime" placeholder="Prezime" required> <br>
-                <input id="korisnickoIme" type="text" placeholder="Korisnicko ime" required> <br>
-                <input id="lozinka" type="password" placeholder="Lozinka" required> <br>
-                <input id="lozinkaPotvrda" type="password" placeholder="Potvrda lozinke" required> <br>
+            <h1>Login</h1>
+            <form>
+
+                <input id="korisncikoIme" type="text" placeholder="Username"> <br>
+                <input id="lozinka" type="password" placeholder="Password"> <br>
+
     
                 
-                <button id="potvrda" onclick="registrujSe()">Registruj se</button>
+                <button id="potvrda" onclick="logovanje()">Login</button>
                 <div id="poruka">
         
                 </div>
-           
+            </form>
           </div>
         </div>
       </div>
@@ -125,7 +123,7 @@ https://templatemo.com/tm-520-highway
           <div class="main-menu">
             <ul>
               <li>
-                <a href="index.html">Home - Full-width</a>
+                <a href="indexENG.html">Home - Full-width</a>
               </li>
               <li>
                 <a href="masonry.html">Home - Masonry</a>
@@ -134,29 +132,29 @@ https://templatemo.com/tm-520-highway
                 <a href="grid.html">Home - Small-width</a>
               </li>
               <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Umetnine</a>
+                <a href="javascript:void(0)" class="dropbtn">Artworks</a>
                 <div class="dropdown-content" style="display: none;">
                   <ul>
-                      <li><a href="umetnine.html">Slike</a></li>
-                      <li><a href="skulpture.html">Skulpture</a></li>
-                      <li><a href="crtezi.html">Crtezi</a></li>
+                      <li><a href="umetnineENG.html">Paintings</a></li>
+                      <li><a href="skulptureENG.html">Sculptures</a></li>
+                      <li><a href="crteziENG.html">Drawings</a></li>
                   </ul>
                 </div>
               </li>
               <li>
-                  <a href="umetnici.html">Umetnici</a>
+                  <a href="umetniciENG.html">Artists</a>
               </li>
               <li>
-                <a href="about.html">O nama</a>
+                <a href="aboutENG.html">About us</a>
               </li>
               <li>
-                <a href="MojNalog.html">Moj nalog</a>
+                <a href="MojNalogENG.html">My account</a>
               </li>
               <li>
-                  <a href="registracija.html">Registracija</a>
+                  <a href="registracijaENG.html">Registration</a>
               </li>
               <li>
-                  <a href="logovanje.html">Logovanje</a>
+                  <a href="logovanjeENG.html">Login</a>
               </li>
             </ul>
             <p>We create awesome templates for you.</p>
@@ -171,6 +169,15 @@ https://templatemo.com/tm-520-highway
   <br>
   <br>
   <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
   <footer>
     <div class="container-fluid">
         <div class="col-md-12">

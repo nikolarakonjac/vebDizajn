@@ -73,7 +73,7 @@ https://templatemo.com/tm-520-highway
                                 <img src="img/picassoPodesen.jpg">
                             </div>
                         </div>
-                        <button class="pregledDela" id="pregledDelaPikaso">pregled dela</button>
+                        <button class="pregledDela" id="pregledDelaPikaso">biografija</button>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
@@ -89,7 +89,7 @@ https://templatemo.com/tm-520-highway
                                 <img src="img/daliPodesen.jpg">
                             </div>
                         </div>
-                        <button class="pregledDela" id="pregledDelaDali">pregled dela</button>
+                        <button class="pregledDela" id="pregledDelaDali">biografija</button>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
@@ -105,7 +105,7 @@ https://templatemo.com/tm-520-highway
                                 <img src="img/davinciPodesen.jpg">
                             </div>
                         </div>
-                        <button class="pregledDela" id="pregledDelaDavinci">pregled dela</button>
+                        <button class="pregledDela" id="pregledDelaDavinci">biografija</button>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
@@ -121,7 +121,7 @@ https://templatemo.com/tm-520-highway
                                 <img src="img/monePodesen.jpg">
                             </div>
                         </div>
-                        <button class="pregledDela" id="pregledDelaMone">pregled dela</button>
+                        <button class="pregledDela" id="pregledDelaMone">biografija</button>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
@@ -137,7 +137,7 @@ https://templatemo.com/tm-520-highway
                                 <img src="img/munchPodesen.jpg">
                             </div>
                         </div>
-                        <button class="pregledDela" id="pregledDelaMone">pregled dela</button>
+                        <button class="pregledDela" id="pregledDelaMone">biografija</button>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
@@ -153,7 +153,7 @@ https://templatemo.com/tm-520-highway
                                 <img src="img/raphaelPodesen.jpg">
                             </div>
                         </div>
-                        <button class="pregledDela" id="pregledDelaRaphael">pregled dela</button>
+                        <button class="pregledDela" id="pregledDelaRaphael">biografija</button>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
@@ -169,7 +169,7 @@ https://templatemo.com/tm-520-highway
                                 <img src="img/seuratPodesen.jpg">
                             </div>
                         </div>
-                        <button class="pregledDela" id="pregledDelaSeurat">pregled dela</button>
+                        <button class="pregledDela" id="pregledDelaSeurat">biografija</button>
                     </div>
                 </div>
                 
@@ -301,16 +301,12 @@ https://templatemo.com/tm-520-highway
         $(document).ready(function() {
         // jQuery code to handle button click event
         $(".pregledDela").click(function() {
-            var imageId = $(this).closest('.portfolio-item').find('.image img').attr('src');
-            imageId = imageId.substring(imageId.lastIndexOf("/") + 1, imageId.lastIndexOf("."));
-            
-            // Create and display a pop-up window with the ID of the picture and an input field
-            var userInput = prompt("Image ID: " + imageId + "\nUnesite Vasu ponudu:");
-            if (userInput !== null) {
-                // User entered a value
-                console.log("User input: " + userInput);
-            }
+            window.location.href = "umetnik.html";
         });
+
+
+        
+
     });
     </script>
 

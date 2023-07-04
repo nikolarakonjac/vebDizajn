@@ -26,7 +26,7 @@ $(document).ready(function() {
 
                         //brisanje iz nizova sa svim ponudama i svim slikama
                         let index = nizSvihPonuda.indexOf(ime);
-                        alert(index);
+                        
                         if(index != -1){
                             nizSvihPonuda.splice(index, 1);
                             nizSvihSlika.splice(index, 1);
