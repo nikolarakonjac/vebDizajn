@@ -103,13 +103,7 @@ https://templatemo.com/tm-520-highway
             <div class="main-menu">
               <ul>
                 <li>
-                  <a href="indexENG.html">Home - Full-width</a>
-                </li>
-                <li>
-                  <a href="masonry.html">Home - Masonry</a>
-                </li>
-                <li>
-                  <a href="grid.html">Home - Small-width</a>
+                  <a href="indexENG.html">Home</a>
                 </li>
                 <li class="dropdown">
                   <a href="javascript:void(0)" class="dropbtn">Artworks</a>
@@ -142,7 +136,19 @@ https://templatemo.com/tm-520-highway
           </div>
         </div>
       </section>
+      <script>
+        // JavaScript to toggle visibility of dropdown content
+        document.querySelector('.dropdown').addEventListener('click', function() {
+          var dropdownContent = document.querySelector('.dropdown-content');
+          dropdownContent.style.display = dropdownContent.style.display === 'none' ? 'block' : 'none';
+        });
+      </script>
 
+        <script>
+            function redirectToCrtezi() {
+            window.location.href = "crtezi.html";
+            }
+        </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
