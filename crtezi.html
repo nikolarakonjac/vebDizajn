@@ -61,7 +61,7 @@ https://templatemo.com/tm-520-highway
     
 
 
-    <div class="grid-portfolio" id="portfolio">
+    <!-- <div class="grid-portfolio" id="portfolio">
         <div class="container">
             <div class="row">
                 <br>
@@ -232,20 +232,50 @@ https://templatemo.com/tm-520-highway
             </div>
             
         </div>
-    </div>
-
-
-    
-       
+    </div> -->
    
+
+
+
+    <div class="grid-portfolio" id="portfolioCrtezi">
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <br>
+            <div class="col-md-12" style="color: red; text-align: center;">
+                <h4>Cao,</h4>
+                <h4>nasi drugari iz vrtica "Pcelica" su odlucila da pomognu svojoj drugarici kojoj je potrebno lecenje tako sto ce nacrtati
+                     nesto sto za njih predstavlja srecu.</h4>
+                <h4>Ti mozes da im pomognes tako sto ces dati simbolicnu svotu novca za neki od crteza kako bi svi zajedno pomogli 
+                    ne bi li dosli do cilja!
+                </h4>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <div class="col-md-12">
+                <button class="btn" id="dugmeSortirajRastuceCrteze">Sortiraj[A-Z]</button>
+                <button class="btn" id="dugmeSortirajOpadajuceCrteze">Sortiraj[Z-A]</button>
+                <button class="btn" id="dugmePretraziCrteze">Pretrazi</button>
+                <input type="text" id="inputFieldCrtezi">
+                
+            </div>
+        </div>
+        <div class="container probaCrtezi">
+            
+            
+           
+        </div>
+    </div>
 
 
     <footer>
         <div class="container-fluid">
             <div class="col-md-12">
-                <p>Copyright &copy; 2018 Company Name 
-    
-    | Designed by TemplateMo</p>
+                <p>Copyright 2023, Luka Dunjic i Nikola Rakonjac, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu</p>
+                    
             </div>
         </div>
     </footer>
@@ -303,43 +333,61 @@ https://templatemo.com/tm-520-highway
         <div class="container">
           <div class="row">
             <div class="main-menu">
-                <ul>
-                    <li>
-                        <a href="index.html">Home - Full-width</a>
-                    </li>
-                    <li>
-                        <a href="masonry.html">Home - Masonry</a>
-                    </li>
-                    <li>
-                        <a href="grid.html">Home - Small-width</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About Us</a>
-                    </li>
-                    <li>
-                        <a href="blog.html">Blog Entries</a>
-                    </li>
-                    <li>
-                        <a href="single-post.html">Single Post</a>
-                    </li>
-                    <li>
-                      <a href="umetnine.html">Umetnine</a>
-                  </li>
-                  <li>
-                      <a href="umetnici.html">Umetnici</a>
-                  </li>
-                  <li>
-                      <a href="Onama.html">O nama</a>
-                  </li>
-                  <li>
-                      <a href="MojNalog.html">Moj nalog</a>
-                  </li>
-                </ul>
-                <p>We create awesome templates for you.</p>
+              <ul>
+                <li>
+                  <a href="index.html">Home - Full-width</a>
+                </li>
+                <li>
+                  <a href="masonry.html">Home - Masonry</a>
+                </li>
+                <li>
+                  <a href="grid.html">Home - Small-width</a>
+                </li>
+                <li>
+                  <a href="about.html">About Us</a>
+                </li>
+                <li>
+                  <a href="blog.html">Blog Entries</a>
+                </li>
+                <li>
+                  <a href="single-post.html">Single Post</a>
+                </li>
+                <li class="dropdown">
+                  <a href="javascript:void(0)" class="dropbtn">Umetnine</a>
+                  <div class="dropdown-content" style="display: none;">
+                    <ul>
+                        <li><a href="umetnine.html">Slike</a></li>
+                        <li><a href="skulpture.html">Skulpture</a></li>
+                        <li><a href="crtezi.html">Crtezi</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="Onama.html">O nama</a>
+                </li>
+                <li>
+                  <a href="MojNalog.html">Moj nalog</a>
+                </li>
+              </ul>
+              <p>We create awesome templates for you.</p>
             </div>
           </div>
         </div>
       </section>
+      
+      <script>
+        // JavaScript to toggle visibility of dropdown content
+        document.querySelector('.dropdown').addEventListener('click', function() {
+          var dropdownContent = document.querySelector('.dropdown-content');
+          dropdownContent.style.display = dropdownContent.style.display === 'none' ? 'block' : 'none';
+        });
+      </script>
+
+        <script>
+            function redirectToCrtezi() {
+            window.location.href = "crtezi.html";
+            }
+        </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
@@ -351,20 +399,165 @@ https://templatemo.com/tm-520-highway
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <script>
         $(document).ready(function() {
-        // jQuery code to handle button click event
-        $(".popupButton").click(function() {
-            var imageId = $(this).closest('.portfolio-item').find('.image img').attr('src');
-            imageId = imageId.substring(imageId.lastIndexOf("/") + 1, imageId.lastIndexOf("."));
-            
-            // Create and display a pop-up window with the ID of the picture and an input field
-            var userInput = prompt("Image ID: " + imageId + "\nUnesite Vasu ponudu:");
-            if (userInput !== null) {
-                // User entered a value
-                console.log("User input: " + userInput);
+
+            let opisSlika = [
+                { imeSlike: "Moja porodica", imeSlikara: "Ema", vrednost: "nepoznato", src:"" },
+                { imeSlike: "More", imeSlikara: "Iva", vrednost: "nepoznato" },
+                { imeSlike: "bubamara", imeSlikara: "Petar", vrednost: "nepoznato", src:"" },
+                { imeSlike: "Porodica", imeSlikara: "Jovan", vrednost: "nepoznato", src:"" },
+                { imeSlike: "Seka i ja", imeSlikara: "Masa", vrednost: "nepoznato", src:"" },
+                { imeSlike: "Dvorac", imeSlikara: "Tea", vrednost: "nepoznato", src:"" },
+                { imeSlike: "Porodica", imeSlikara: "Uros", vrednost: "nepoznato", src:"" },
+                { imeSlike: "Leto", imeSlikara: "Igor", vrednost: "nepoznato", src:"" },
+                { imeSlike: "Sunce", imeSlikara: "Luka", vrednost: "nepoznato", src:"" }
+            ];
+
+            let nizSrcSlika = [];
+            for(let i=0;i < 9; i++){
+                opisSlika[i].src = "c" + (i+1) + "Podesena"
+                
             }
-        });
+
+            $('#dugmePretraziCrteze').on('click', function(){
+                let vrednostZaPretragu =  $('#inputFieldCrtezi').val();
+                if(vrednostZaPretragu == ""){
+                    renderImages();
+                }
+                else{
+                    renderImagesForSpecificSearch(vrednostZaPretragu);
+                }
+                
+
+            });
+
+            $('#dugmeSortirajRastuceCrteze').on('click', function() {
+                opisSlika.sort((a, b) => a.imeSlike.localeCompare(b.imeSlike));
+                
+                renderImages();
+            });
+
+            $('#dugmeSortirajOpadajuceCrteze').on('click', function() {
+                opisSlika.sort((a, b) => b.imeSlike.localeCompare(a.imeSlike));
+                
+                renderImages();
+            });
+
+            renderImages();
+
+            function renderImagesForSpecificSearch(valueForSearch) {
+                let html = '';
+                let searchValue = valueForSearch.toLowerCase(); // Convert search value to lowercase
+
+                for (let i = 0; i < opisSlika.length; i++) {
+                    let imeSlike = opisSlika[i].imeSlike.toLowerCase(); // Convert target string to lowercase
+                    let imeSlikara = opisSlika[i].imeSlikara.toLowerCase(); // Convert target string to lowercase
+
+                    if (imeSlike.includes(searchValue) || imeSlikara.includes(searchValue)) {
+                        html += '<div class="col-md-4 col-sm-6">' +
+                            '<div class="portfolio-item">' +
+                            '<div class="thumb">' +
+                            '<a href="img/crtezi/c' + (i + 1) + 'Podesena.jpg" data-lightbox="image-1">' +
+                            '<div class="hover-effect">' +
+                            '<div class="hover-content">' +
+                            '<h1 style = "color:black;">' + opisSlika[i].imeSlike + '<em style = "color:black;">, ' + opisSlika[i].imeSlikara + '</em></h1>' +
+                            '<p></p>' +
+                            '<p></p>' +
+                            '</div>' +
+                            '</div>' +
+                            '</a>' +
+                            '<div class="image">' +
+                            '<img src="img/crtezi/' + opisSlika[i].src + '.jpg">' +
+                            '</div>' +
+                            '</div>' +
+                            '<button class="popupButton" id="popupButton' + (i + 1) + 'Crtezi' + '">Dodaj ponudu</button>' +
+                            '</div>' +
+                            '</div>';
+                    }
+                }
+
+                $('.probaCrtezi').html(html);
+            }
+
+
+
+            function renderImages() {
+                let html = '';
+                for (let i = 0; i < opisSlika.length; i++) {
+                    html += '<div class="col-md-4 col-sm-6">' +
+                            '<div class="portfolio-item">' +
+                                '<div class="thumb">' +
+                                '<a href="img/crtezi/c' + (i + 1) + 'Podesena.jpg" data-lightbox="image-1">' +
+                                    '<div class="hover-effect">' +
+                                    '<div class="hover-content">' +
+                                        '<h1 style = "color:black;">' + opisSlika[i].imeSlike + '<em style = "color:black;">, ' + opisSlika[i].imeSlikara  + '</em></h1>' +
+                                        '<p></p>' +
+                                        '<p></p>' +
+                                    '</div>' +
+                                    '</div>' +
+                                '</a>' +
+                                '<div class="image">' +
+                                    '<img src="img/crtezi/' + opisSlika[i].src + '.jpg">' +
+                                '</div>' +
+                                '</div>' +
+                                '<button class="popupButton" id="popupButton' + (i + 1) + 'Crtezi' + '">Dodaj ponudu</button>' +
+                            '</div>' +
+                            '</div>';
+                }
+                
+                $('.probaCrtezi').html(html);
+        }
+
+
+
+
+            
+            $(".popupButton").click(function() {
+                var imageId = $(this).closest('.portfolio-item').find('.image img').attr('src');
+                imageId = imageId.substring(imageId.lastIndexOf("/") + 1, imageId.lastIndexOf("."));
+                
+                
+                var userInput = prompt("Image ID: " + imageId + "\nUnesite Vasu ponudu:");
+                if (userInput !== null) {
+                    
+                    console.log("User input: " + userInput);
+                }
+
+                //Odavde kopiras do kraja u ostale umetnine
+                let username=JSON.parse(localStorage.getItem("username"));
+                let password=JSON.parse(localStorage.getItem("password"));
+
+                let nizKorisnika=JSON.parse(localStorage.getItem("korisniciIme"));
+                let nizKorisnikaPonude=JSON.parse(localStorage.getItem("korisniciPonude"));
+                let nizBrojevaPonuda=JSON.parse(localStorage.getItem("korisniciBrojPonuda"));
+                let nizSlikaZaPonudu=JSON.parse(localStorage.getItem("nizSlikaPonuda"));
+                
+                let nizSvihPonuda=JSON.parse(localStorage.getItem("nizSvihPonuda"));
+                let nizSvihSlika=JSON.parse(localStorage.getItem("nizSvihSlika"));
+
+                for(let i=0;i<nizKorisnikaPonude.length;i++){
+                    if(nizKorisnika[i]==username){
+                        //("usao sam");
+                        nizKorisnikaPonude[i].push(userInput);//dodavanje ponude
+                        nizBrojevaPonuda[i]++;
+                        nizSlikaZaPonudu[i].push(imageId);//dodavanje ime slike za ponudu
+                        nizSvihPonuda.push(userInput);
+                        nizSvihSlika.push(imageId);
+
+                        //ovde samo promeni vrednost ponude stavio sam da je 45
+
+                    }
+                    
+                }
+                localStorage.setItem("nizSvihSlika", JSON.stringify(nizSvihSlika));
+                localStorage.setItem("nizSvihPonuda",JSON.stringify(nizSvihPonuda));
+                localStorage.setItem("korisniciIme", JSON.stringify(nizKorisnika));
+                localStorage.setItem("korisniciPonude", JSON.stringify(nizKorisnikaPonude));
+                localStorage.setItem("korisniciBrojPonuda", JSON.stringify(nizBrojevaPonuda));
+                localStorage.setItem("nizSlikaPonuda", JSON.stringify(nizSlikaZaPonudu));
+            });
     });
     </script>
 

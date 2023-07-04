@@ -13,13 +13,34 @@ jQuery(document).ready(function($) {
         /*let ponuda = $("<p>").text(nizSvihPonuda[i] + " " + nizSvihSlika[i]);
         $(".najnovijePonude").append(ponuda);*/
         let colDiv = $("<div>").addClass("col-md-4");
-        let slika = $("<p>").text("ime slike: " + nizSvihSlika[i]);
-        let ponuda = $("<p>").text("ponuda: " + nizSvihPonuda[i]);
+        //let slika = $("<p>").text("ime slike: " + nizSvihSlika[i]);
+        //alert(nizSvihSlika[i]);
+        let slika;
+        //slika1Podesena
+        //c1Podesena
+        //s1Podesena
+        //alert(nizSvihSlika[i]);
+        if (nizSvihSlika[i].includes("slika")) {
+          slika = $("<img>").attr("src", "img/slike/" + nizSvihSlika[i] + ".jpg");
+        } else if (nizSvihSlika[i].includes("c")) {
+          slika = $("<img>").attr("src", "img/crtezi/" + nizSvihSlika[i] + ".jpg");
+        } else if (nizSvihSlika[i].includes("s")) {
+          slika = $("<img>").attr("src", "img/skulpture/" + nizSvihSlika[i] + ".jpg");
+        }
+        
+
+        //let slika = $("<img>").attr("src", "img/slike/" + nizSvihSlika[i] + ".jpg");
+        let ponuda = $("<p>").text("vrednost ponude: " + nizSvihPonuda[i]).css({
+          "font-size": "20px",
+          "text-align": "center"
+        });
         colDiv.append(slika);
         colDiv.append(ponuda);
         $(".najnovijePonude").append(colDiv);
     }
-  }
+
+
+  };
   
     
  
