@@ -1,10 +1,10 @@
 function registrujSe(){
-    alert("Usao sam");
+    
     let korisnickoIme=document.getElementById("korisnickoIme").value;
     let lozinka=document.getElementById("lozinka").value;
     let lozinkaPotvrda=document.getElementById("lozinkaPotvrda").value;
     let ime=document.getElementById("ime").value;
-    alert("prosao");
+    
     if(lozinka!=lozinkaPotvrda){
         alert("Lozinka i potvrda lozinke nisu isti.");
         return;
@@ -12,7 +12,7 @@ function registrujSe(){
 
 
     let nizKorisnika=localStorage.getItem("korisniciIme");
-    alert(nizKorisnika);
+   
     if(nizKorisnika==null){
 
         let username="";

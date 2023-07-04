@@ -1,5 +1,5 @@
 function logovanje(){
-    alert("Usao sam");
+    
     let korisnickoIme=document.getElementById("korisncikoIme").value;
     let lozinka=document.getElementById("lozinka").value;
     let username=JSON.parse(localStorage.getItem("username"));
@@ -10,11 +10,12 @@ function logovanje(){
     }
     if(password!=lozinka){
         alert("pogresno ste uneli podatke za logovanje");
+        return;
     }
     let nizKorisnika=JSON.parse(localStorage.getItem("korisniciIme"));   
     for (let i =0;i<nizKorisnika.length;i++){
         if(nizKorisnika[i]==korisnickoIme){
-            alert("usao sam");
+            
             let username=korisnickoIme;
             let password=lozinka;
             localStorage.setItem("username", JSON.stringify(username));
